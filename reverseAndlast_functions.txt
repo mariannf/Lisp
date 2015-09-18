@@ -1,0 +1,18 @@
+;; Mariann 
+;; Assignment IV
+;; ITCS- 3152
+ 
+;; Write your own 1,"reverse" and 2,"last" functions in LISP. You can only use recursion
+
+;;1,This is the code to get  a reverse of a list
+(defun rev (lst)
+  (if (null lst)
+      nil
+    (append (rev (cdr lst)) 
+                 (list (car lst)))))
+
+;; 2,This code to get the last element in a list
+ (defun get-last (lst) 
+      (cond  ((null lst) nil)
+             ((null (cdr lst)) (car lst))
+             (t (get-last (cdr lst)))))
